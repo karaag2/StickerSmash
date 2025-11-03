@@ -2,7 +2,6 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { CarousselNavigation } from "@/components/ui/Caroussel";
 import { useRouter } from "expo-router";
 import AuthForm from "@/components/ui/AuthForm";
-import { Carot } from "@/components/ui/Caroussel";
 import React from 'react';
 import { Dimensions, StyleSheet } from 'react-native';
 

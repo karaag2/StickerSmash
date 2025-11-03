@@ -1,10 +1,11 @@
 import { View, Text , TextInput, TouchableOpacity} from 'react-native'
-import {router} from 'expo-router'
+import {router, useRouter} from 'expo-router'
 import React from 'react'
 import { Label } from '@react-navigation/elements'
 
 const AuthForm = ({type}:{type:string}) => {
     const ma = type.charAt(0).toUpperCase()+type.slice(1)
+    const router = useRouter()
   return (
   <View className="flex-col px-6">
 				<Text className="text-white font-bold text-2xl my-6">
@@ -20,10 +21,10 @@ const AuthForm = ({type}:{type:string}) => {
 						className="border-2 border-white px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
 					/>
 
-                    <TextInput
+                {type==='sign up' &&    <TextInput
 						placeholder="Password"
 						className="border-2 border-white px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
-					/>
+					/>}
 				</View>
 				<View className="my-4 mt-10">
 					<TouchableOpacity

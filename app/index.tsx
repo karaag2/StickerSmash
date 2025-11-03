@@ -45,13 +45,13 @@ export default function Login() {
 						<View className="flex-col gap-6 w-full   h-1/2">
 							<TouchableOpacity
 								className="bg-colorsi-brightTurquoise rounded-2xl py-3 items-center justify-center"
-								onPress={() => router.push("/signup")}
+								onPress={() => router.navigate("/signup")}
 							>
 								<Text className="text-lg font-bold">Sign Up</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								className="bg-colorsi-duckBlue rounded-2xl py-3 items-center justify-center"
-								onPress={() => router.push("/login")}
+								onPress={() => router.navigate("/login")}
 							>
 								<Text className="text-lg font-bold text-clorsi-brightTurquoise">
 									Log In
