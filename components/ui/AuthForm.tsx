@@ -1,29 +1,28 @@
-import { View, Text , TextInput, TouchableOpacity} from 'react-native'
-import {router, useRouter} from 'expo-router'
+import { useRouter } from 'expo-router'
 import React from 'react'
-import { Label } from '@react-navigation/elements'
+import { Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 const AuthForm = ({type}:{type:string}) => {
     const ma = type.charAt(0).toUpperCase()+type.slice(1)
     const router = useRouter()
   return (
-  <View className="flex-col px-6">
-				<Text className="text-white font-bold text-2xl my-6">
+  <View className="flex flex-col px-6 flex-1 justify-end h-fit">
+				<Text className="text-white font-bold text-2xl mb-6">
 					{ma} your account
 				</Text>
-				<View className="items-cente  gap-4">
+				<View className="items-center gap-4">
 					<TextInput
 						placeholder="Email"
 						className="border-2 focus:outline-deepBlueGray px-3 text-lg border-zinc-600 py-3 w-full rounded-2xl"
 					/>
 					<TextInput
 						placeholder="Password"
-						className="border-2 border-white px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
+						className="border-2  px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
 					/>
 
                 {type==='sign up' &&    <TextInput
 						placeholder="Password"
-						className="border-2 border-white px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
+						className="border-2  px-3 text-lg py-3 w-full rounded-2xl border-zinc-600 focus:outline-deepBlueGray"
 					/>}
 				</View>
 				<View className="my-4 mt-10">
@@ -52,7 +51,7 @@ const AuthForm = ({type}:{type:string}) => {
 							<Text className="text-center text-white font-bold">Apple</Text>
 						</View>
 					</View>
-					<Text className="text-center text-duckBlue my-8 text-gray-400 text-xs">
+					<Text className="text-center text-duckBlue my-4  text-gray-400 text-xs">
 						By Signing up. you agree to our . you agree to our{" "}
 						<Text className="underline text-colorsi-brightTurquoise">
 							Terms of Service

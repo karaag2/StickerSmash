@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const mano = () => {
+const Slider = () => {
   return (
     <View>
-      <Text>manogg</Text>
+      <Text>Slider</Text>
     </View>
   )
 }
 
-export default mano
+export default Slider

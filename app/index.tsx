@@ -1,15 +1,11 @@
 import { useRouter } from "expo-router";
-import { useCallback } from "react";
-import {Stack} from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 // import Text from "src/ui/Text.tsx";
 
-import { CarousselNavigation } from "@/components/ui/Caroussel";
 
 export default function Login() {
 	const router = useRouter();
-
 	// const onPress = useCallback(async () => {
 	// 	await login();
 	// 	router.replace("/");
@@ -38,20 +34,20 @@ export default function Login() {
 								community.
 							</Text>
 							<View className="flex-row w-20 justify-between self-center">
-								<CarousselNavigation />
+								{/* <CarousselNavigation /> */}
 							</View>
 						</View>
 
 						<View className="flex-col gap-6 w-full   h-1/2">
 							<TouchableOpacity
 								className="bg-colorsi-brightTurquoise rounded-2xl py-3 items-center justify-center"
-								onPress={() => router.navigate("/signup")}
+								onPress={() => router.replace("/signup")}
 							>
 								<Text className="text-lg font-bold">Sign Up</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								className="bg-colorsi-duckBlue rounded-2xl py-3 items-center justify-center"
-								onPress={() => router.navigate("/login")}
+								onPress={() => router.replace("/login")}
 							>
 								<Text className="text-lg font-bold text-clorsi-brightTurquoise">
 									Log In
